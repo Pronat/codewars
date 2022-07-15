@@ -36,3 +36,9 @@ export function getVolumeOfCuboid(length: number, width: number, height: number)
        const cuboid = length * width * height
     return cuboid
     }
+
+
+export let humanYearsCatYearsDogYears = function(humanYears) {
+    // Your code here!
+    return [0,0,0];
+}

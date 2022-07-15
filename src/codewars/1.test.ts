@@ -1,4 +1,4 @@
-import {checkForFactor, getAge, getVolumeOfCuboid, mergeArrays, multiply} from "./1";
+import {checkForFactor, getAge, getVolumeOfCuboid, humanYearsCatYearsDogYears, mergeArrays, multiply} from "./1";
 
 test('merge array correct', ()=> {
     expect(mergeArrays([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
@@ -35,4 +35,8 @@ test('calculate volume of cuboid', () => {
     expect(getVolumeOfCuboid(6.3,2,5)).toBe(63);
 })
 
-test()
+test("Cat years, Dog years", () => {
+    expect(humanYearsCatYearsDogYears(1)).toBe([1,15,15])
+    expect(humanYearsCatYearsDogYears(2)).toBe([2,24,24])
+    expect(humanYearsCatYearsDogYears(10)).toBe([10,56,64])
+})
