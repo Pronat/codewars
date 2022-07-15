@@ -1,4 +1,4 @@
-import {checkForFactor, getAge, mergeArrays, multiply} from "./1";
+import {checkForFactor, getAge, getVolumeOfCuboid, mergeArrays, multiply} from "./1";
 
 test('merge array correct', ()=> {
     expect(mergeArrays([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
@@ -29,3 +29,10 @@ test('check for factor', () => {
     expect(checkForFactor(2453,5)).toBe(false)
     expect(checkForFactor(24617,3)).toBe(false)
 })
+
+test('calculate volume of cuboid', () => {
+    expect(getVolumeOfCuboid(1,2,2)).toBe(4);
+    expect(getVolumeOfCuboid(6.3,2,5)).toBe(63);
+})
+
+test()

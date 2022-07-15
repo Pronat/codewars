@@ -31,3 +31,8 @@ export function checkForFactor (base: number, factor: number) {
         return Number.isInteger((base) / (factor)) ? true : false
     }
 }
+
+export function getVolumeOfCuboid(length: number, width: number, height: number) {
+       const cuboid = length * width * height
+    return cuboid
+    }
