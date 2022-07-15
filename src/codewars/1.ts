@@ -25,3 +25,9 @@ export const multiply = (x :number, y: number) => {
     const m = x * y
     return m
 }
+
+export function checkForFactor (base: number, factor: number) {
+    if (base > 0 && factor > 0) {
+        return Number.isInteger((base) / (factor)) ? true : false
+    }
+}
