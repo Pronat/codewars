@@ -38,7 +38,22 @@ export function getVolumeOfCuboid(length: number, width: number, height: number)
     }
 
 
-export let humanYearsCatYearsDogYears = function(humanYears) {
-    // Your code here!
-    return [0,0,0];
+export let humanYearsCatYearsDogYears = function(humanYears: number) {
+    const arr = []
+    let x = 0
+    let y = 0
+    let z = 0
+   if(humanYears === 1) {
+       x = 1
+       y = 15
+       z = 15
+       arr.push(x, y, z)
+   }
+   if(humanYears === 2) {
+       x = humanYears
+       y = 15 + (humanYears - 1) * 9
+       z = 15 + (humanYears - 1) * 9
+       arr.push(x, y, z)
+   }
+    return [arr];
 }
