@@ -20,3 +20,8 @@ export function getAge(inputString:string) {
         return Number(ageN)
     }
 }
+
+export const multiply = (x :number, y: number) => {
+    const m = x * y
+    return m
+}
