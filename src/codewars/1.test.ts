@@ -36,7 +36,7 @@ test('calculate volume of cuboid', () => {
 })
 
 test("Cat years, Dog years", () => {
-    expect(humanYearsCatYearsDogYears(1)).toBe([1,15,15])
-    expect(humanYearsCatYearsDogYears(2)).toBe([2,24,24])
-    expect(humanYearsCatYearsDogYears(10)).toBe([10,56,64])
+    expect(humanYearsCatYearsDogYears(1)).toEqual([1,15,15])
+    expect(humanYearsCatYearsDogYears(2)).toEqual([2,24,24])
+    expect(humanYearsCatYearsDogYears(10)).toEqual([10,56,64])
 })
