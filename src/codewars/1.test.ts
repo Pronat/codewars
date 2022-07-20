@@ -1,4 +1,12 @@
-import {checkForFactor, getAge, getVolumeOfCuboid, humanYearsCatYearsDogYears, mergeArrays, multiply} from "./1";
+import {
+    checkForFactor,
+    getAge,
+    getVolumeOfCuboid,
+    humanYearsCatYearsDogYears,
+    mergeArrays,
+    multiply,
+    squareOrSquareRoot
+} from "./1";
 
 test('merge array correct', ()=> {
     expect(mergeArrays([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
@@ -39,4 +47,9 @@ test("Cat years, Dog years", () => {
     expect(humanYearsCatYearsDogYears(1)).toEqual([1,15,15])
     expect(humanYearsCatYearsDogYears(2)).toEqual([2,24,24])
     expect(humanYearsCatYearsDogYears(10)).toEqual([10,56,64])
+})
+
+test("To square(root) or not to square(root)", () => {
+    expect(squareOrSquareRoot([ 4, 3, 9, 7, 2, 1 ])).toBe([ 2, 9, 3, 49, 4, 1 ])
+    expect(squareOrSquareRoot([ 1, 2, 3, 4, 5, 6])).toBe([ 1, 4, 9, 2, 25, 36 ])
 })
