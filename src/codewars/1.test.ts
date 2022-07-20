@@ -53,3 +53,15 @@ test("To square(root) or not to square(root)", () => {
     expect(squareOrSquareRoot([ 4, 3, 9, 7, 2, 1 ])).toEqual([ 2, 9, 3, 49, 4, 1 ])
     expect(squareOrSquareRoot([ 1, 2, 3, 4, 5, 6])).toEqual([ 1, 4, 9, 2, 25, 36 ])
 })
+
+test("Expressions Matter", () => {
+    expect(expressionMatter(2, 1, 2)).toBe(6)
+    expect(expressionMatter(2, 1, 1)).toBe(4)
+    expect(expressionMatter(1, 1, 2)).toBe(3)
+
+    expect(expressionMatter(5, 1, 3)).toBe(20)
+    expect(expressionMatter(3, 5, 7)).toBe(105)
+
+    expect(expressionMatter(2, 10, 3)).toBe(60)
+    expect(expressionMatter(10, 5, 6)).toBe(300)
+})
