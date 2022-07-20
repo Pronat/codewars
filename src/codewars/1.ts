@@ -76,4 +76,6 @@ export const expressionMatter = (a: number, b: number, c: number) => {
     let val2 = a * b * c
     let val3 = a + b * c
     let val4 = (a + b) * c
+    let val5 = a + b + c
+    return Math.max(val1, val2, val3, val4, val5)
 }

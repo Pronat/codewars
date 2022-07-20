@@ -1,5 +1,5 @@
 import {
-    checkForFactor,
+    checkForFactor, expressionMatter,
     getAge,
     getVolumeOfCuboid,
     humanYearsCatYearsDogYears,
@@ -57,7 +57,7 @@ test("To square(root) or not to square(root)", () => {
 test("Expressions Matter", () => {
     expect(expressionMatter(2, 1, 2)).toBe(6)
     expect(expressionMatter(2, 1, 1)).toBe(4)
-    expect(expressionMatter(1, 1, 2)).toBe(3)
+    expect(expressionMatter(1, 1, 1)).toBe(3)
 
     expect(expressionMatter(5, 1, 3)).toBe(20)
     expect(expressionMatter(3, 5, 7)).toBe(105)
