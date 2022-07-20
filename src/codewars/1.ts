@@ -67,6 +67,6 @@ export const squareOrSquareRoot = (arr: Array<number>) => {
         } else {
             arr2.push(arr[i] * arr[i])
         }
-
     }
+    return arr2
 }
