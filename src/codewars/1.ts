@@ -71,6 +71,9 @@ export const squareOrSquareRoot = (arr: Array<number>) => {
     return arr2
 }
 
-export const expressionMatter = () => {
-
+export const expressionMatter = (a: number, b: number, c: number) => {
+    let val1 = a * (b + c)
+    let val2 = a * b * c
+    let val3 = a + b * c
+    let val4 = (a + b) * c
 }
