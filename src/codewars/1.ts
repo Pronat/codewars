@@ -92,11 +92,13 @@ export const stray = (numbers: Array<number>) => {
 export const getMostProfitFromStockQuotes = (quotes: Array<number>) => {
     let days = 0
     let sum = 0
-    for (let i = 0; i < quotes.length; i++) {
+    for (let i = 0; i < quotes.length - 1; i++) {
         if (quotes[i] < quotes[i + 1]) {
             days += 1
-        } else if (quotes[i] > quotes[i + 1] || i + 1 === quotes.length)
+        } else
             sum = sum + (days * quotes[i + 1])
     }
     return sum
 }
+
+// (quotes[i] > quotes[i + 1] || i + 1 === quotes.length)
