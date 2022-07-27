@@ -79,3 +79,9 @@ export const expressionMatter = (a: number, b: number, c: number) => {
     let val5 = a + b + c
     return Math.max(val1, val2, val3, val4, val5)
 }
+
+export const stray = (numbers: Array<number>) => {
+    for (let i = 0; i < numbers.length; i++) {
+
+    }
+}

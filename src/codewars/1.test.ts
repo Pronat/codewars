@@ -5,7 +5,7 @@ import {
     humanYearsCatYearsDogYears,
     mergeArrays,
     multiply,
-    squareOrSquareRoot
+    squareOrSquareRoot, stray
 } from "./1";
 
 test('merge array correct', ()=> {
@@ -64,4 +64,10 @@ test("Expressions Matter", () => {
 
     expect(expressionMatter(2, 10, 3)).toBe(60)
     expect(expressionMatter(10, 5, 6)).toBe(300)
+})
+
+test('Find the stray number', () => {
+    expect(stray([1, 1, 2])).toBe(2)
+    expect(stray([17, 17, 3, 17, 17, 17, 17])).toBe(3)
+    expect(stray([1, 1, 25, 1, 1, 1, 1])).toBe(3)
 })
