@@ -89,3 +89,7 @@ export const stray = (numbers: Array<number>) => {
         }
     }
 }
+
+export const getMostProfitFromStockQuotes = (quotes) => {
+
+}
