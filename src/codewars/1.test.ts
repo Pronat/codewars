@@ -69,5 +69,5 @@ test("Expressions Matter", () => {
 test('Find the stray number', () => {
     expect(stray([1, 1, 2])).toBe(2)
     expect(stray([17, 17, 3, 17, 17, 17, 17])).toBe(3)
-    expect(stray([1, 1, 25, 1, 1, 1, 1])).toBe(3)
+    expect(stray([1, 1, 25, 1, 1, 1, 1])).toBe(25)
 })

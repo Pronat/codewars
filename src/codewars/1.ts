@@ -82,6 +82,10 @@ export const expressionMatter = (a: number, b: number, c: number) => {
 
 export const stray = (numbers: Array<number>) => {
     for (let i = 0; i < numbers.length; i++) {
-
+        if (numbers[i] === numbers[i+1] || numbers[i] === numbers[i-1]) {
+        }
+        else {
+            return numbers[i]
+        }
     }
 }
