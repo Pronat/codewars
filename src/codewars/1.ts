@@ -93,14 +93,11 @@ export const getMostProfitFromStockQuotes = (quotes: Array<number>) => {
     let days = 0
     let sum = 0
     for (let i = 0; i < quotes.length; i++) {
-        if (quotes[i + 1]) {
             if (quotes[i] < quotes[i + 1]) {
                 days += 1
             }
-            else {
-
-            }
-        }
-        return days
+                // sum = sum + ( days * (quotes[i + 1]) )
+                    sum = days * quotes[i]
     }
+    return sum
 }
