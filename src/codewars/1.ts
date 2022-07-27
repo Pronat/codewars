@@ -82,9 +82,8 @@ export const expressionMatter = (a: number, b: number, c: number) => {
 
 export const stray = (numbers: Array<number>) => {
     for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] === numbers[i+1] || numbers[i] === numbers[i-1]) {
-        }
-        else {
+        if (numbers[i] === numbers[i + 1] || numbers[i] === numbers[i - 1]) {
+        } else {
             return numbers[i]
         }
     }
@@ -96,10 +95,8 @@ export const getMostProfitFromStockQuotes = (quotes: Array<number>) => {
     for (let i = 0; i < quotes.length; i++) {
         if (quotes[i] < quotes[i + 1]) {
             days += 1
-        }
-        else if (quotes[i] > quotes[i + 1])
+        } else if (quotes[i] > quotes[i + 1] || i + 1 === quotes.length)
             sum = sum + (days * quotes[i + 1])
-        return sum
     }
-
+    return sum
 }
