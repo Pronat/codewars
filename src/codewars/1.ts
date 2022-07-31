@@ -122,10 +122,9 @@ export const getDivisorsCnt = (n: number) => {
 }
 
 export const roundToNext5 = (n: number) => {
-    if (n % 5 === 0 ) {
-        return n
-    }
-    else {
-        n = n + 1
+    if (n % 5 == 0) {
+        return (Math.floor(n / 5)) * 5;
+    } else {
+        return (Math.floor(n / 5) * 5) + 5;
     }
 }
