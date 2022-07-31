@@ -89,18 +89,34 @@ export const stray = (numbers: Array<number>) => {
     }
 }
 
-export const getMostProfitFromStockQuotes = (quotes: Array<number>) => {
-    let days = 0
-    let sum = 0
-    let diference = 0
-    for (let i = 0; i < quotes.length; i++) {
-            if (quotes[i] < quotes[i + 1]) {
-                days += 1
-                diference += quotes[i]
+// export const getMostProfitFromStockQuotes = (quotes: Array<number>) => {
+//     let days = 0
+//     let sum = 0
+//     let diference = 0
+//     for (let i = 0; i < quotes.length; i++) {
+//             if (quotes[i + 1]) {
+//                 days += 1
+//                 diference += quotes[i]
+//             }
+//             else if (quotes[i] > quotes[i + 1]) {
+//                 console.log('Nothing to do')
+//             }
+//             else {
+//                 sum = sum + (days * quotes[i])
+//                 days = 0
+//             }
+//     }
+//     return sum - diference
+// }
 
-            }
-                // sum = sum + ( days * (quotes[i + 1]) )
-                    sum = days * quotes[i]
+export const getDivisorsCnt = (n: number) => {
+    let counter = 0
+    let a = n
+    for (let i = n; i > 0; i--) {
+        if (Number.isInteger(n / a)) {
+            counter = counter + 1
+        }
+        a--
     }
-    return sum - diference
+    return counter
 }

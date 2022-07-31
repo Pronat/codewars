@@ -1,6 +1,6 @@
 import {
     checkForFactor, expressionMatter,
-    getAge, getMostProfitFromStockQuotes,
+    getAge, getDivisorsCnt,
     getVolumeOfCuboid,
     humanYearsCatYearsDogYears,
     mergeArrays,
@@ -72,9 +72,16 @@ test('Find the stray number', () => {
     expect(stray([1, 1, 25, 1, 1, 1, 1])).toBe(25)
 })
 
-test('Most profit from stock quotes', () => {
-    expect(getMostProfitFromStockQuotes([1, 2, 3, 4, 5, 6])).toBe(15)
-    expect(getMostProfitFromStockQuotes([6, 5, 4, 3, 2, 1])).toBe(0)
-    expect(getMostProfitFromStockQuotes([1, 6, 5, 10, 8, 7])).toBe(18)
-    expect(getMostProfitFromStockQuotes([1, 2, 10, 3, 2, 7, 3, 2])).toBe(26)
+// test('Most profit from stock quotes', () => {
+//     expect(getMostProfitFromStockQuotes([1, 2, 3, 4, 5, 6])).toBe(15)
+//     expect(getMostProfitFromStockQuotes([6, 5, 4, 3, 2, 1])).toBe(0)
+//     expect(getMostProfitFromStockQuotes([1, 6, 5, 10, 8, 7])).toBe(18)
+//     expect(getMostProfitFromStockQuotes([1, 2, 10, 3, 2, 7, 3, 2])).toBe(26)
+// })
+
+test('Count the number of divisors of a positive integer n', () => {
+    expect(getDivisorsCnt(1)).toBe(1)
+    expect(getDivisorsCnt(10)).toBe(4)
+    expect(getDivisorsCnt(11)).toBe(2)
+    expect(getDivisorsCnt(54)).toBe(8)
 })
