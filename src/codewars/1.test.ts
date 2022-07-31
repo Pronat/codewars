@@ -4,7 +4,7 @@ import {
     getVolumeOfCuboid,
     humanYearsCatYearsDogYears,
     mergeArrays,
-    multiply,
+    multiply, roundToNext5,
     squareOrSquareRoot, stray
 } from "./1";
 
@@ -84,4 +84,15 @@ test('Count the number of divisors of a positive integer n', () => {
     expect(getDivisorsCnt(10)).toBe(4)
     expect(getDivisorsCnt(11)).toBe(2)
     expect(getDivisorsCnt(54)).toBe(8)
+})
+
+test('Round up to the next multiple of 5', ()=> {
+    expect(roundToNext5(0)).toBe(0)
+    expect(roundToNext5(2)).toBe(5)
+    expect(roundToNext5(3)).toBe(5)
+    expect(roundToNext5(12)).toBe(15)
+    expect(roundToNext5(21)).toBe(15)
+    expect(roundToNext5(30)).toBe(25)
+    expect(roundToNext5(-2)).toBe(30)
+    expect(roundToNext5(-5)).toBe(-5)
 })

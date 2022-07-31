@@ -120,3 +120,12 @@ export const getDivisorsCnt = (n: number) => {
     }
     return counter
 }
+
+export const roundToNext5 = (n: number) => {
+    if (n % 5 === 0 ) {
+        return n
+    }
+    else {
+        n = n + 1
+    }
+}
