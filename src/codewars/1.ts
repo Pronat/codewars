@@ -130,14 +130,33 @@ export const twoOldestAges = (ages: Array<number>) => {
     let max1 = 0
     let max2 = 0
     let arr = []
-    for (let i = 0; i < ages.length; i++) {
-        if (ages[i] > max1) {
-            max1 = ages[i]
-        } else if (ages[i] > max2) {
-            max2 = ages[i]
-        }
-    }
-    arr.push(max2, max1)
-
+    ages.sort((a, b) => b - a)
+    max1 = arr.push(ages[1])
+    max2 = arr.push(ages[0])
     return arr
+}
+
+export const arithmetic = (a: number, b: number, operator: string) => {
+    let result = 0
+        switch (operator) {
+            case "add": {
+                result = a + b
+                return result
+            }
+            case "subtract": {
+                result = a - b
+                return result
+            }
+            case "multiply": {
+                result = a * b
+                return result
+            }
+            case "divide": {
+                result = a  / b
+                return result
+            }
+            default: {
+                console.log("Error")
+            }
+        }
 }

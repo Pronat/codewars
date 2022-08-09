@@ -1,4 +1,5 @@
 import {
+    arithmetic,
     checkForFactor, expressionMatter,
     getAge, getDivisorsCnt,
     getVolumeOfCuboid,
@@ -102,4 +103,12 @@ test('Two Oldest Ages', () => {
     expect(twoOldestAges([1,5,87,45,8,8])).toEqual ([45, 87])
     expect(twoOldestAges([6,5,83,5,3,18])).toEqual([18, 83])
     expect(twoOldestAges([6,5,83,5,3,18])).toEqual([18, 83])
+    expect(twoOldestAges([67,58,98,97,59,35,38,76,23,76,66,80,54,20,15,66,99,66,71,5,94,93,12,22,17,32,69,76,79,11])).toEqual([98,99])
+})
+
+test('Make a function that does arithmetic!', () => {
+    expect(arithmetic(1, 2, "add")).toBe(3)
+    expect(arithmetic(8, 2, "subtract")).toBe(6)
+    expect(arithmetic(5, 2, "multiply")).toBe(10)
+    expect(arithmetic(8, 2, "divide")).toBe(4)
 })
