@@ -91,8 +91,15 @@ test('Round up to the next multiple of 5', ()=> {
     expect(roundToNext5(2)).toBe(5)
     expect(roundToNext5(3)).toBe(5)
     expect(roundToNext5(12)).toBe(15)
-    expect(roundToNext5(21)).toBe(15)
-    expect(roundToNext5(30)).toBe(25)
-    expect(roundToNext5(-2)).toBe(30)
+    expect(roundToNext5(21)).toBe(25)
+    expect(roundToNext5(30)).toBe(30)
+    expect(roundToNext5(-2)).toBe(0)
     expect(roundToNext5(-5)).toBe(-5)
+})
+
+test('Two Oldest Ages', () => {
+    expect(twoOldestAges([1,5,87,45,8,8])).toBe([45, 87])
+    expect(twoOldestAges([1,5,87,45,8,8])).toBe([45, 87])
+    expect(twoOldestAges([6,5,83,5,3,18])).toBe([18, 83])
+    expect(twoOldestAges([6,5,83,5,3,18])).toBe([18, 83])
 })
