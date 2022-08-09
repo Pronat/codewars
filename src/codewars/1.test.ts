@@ -5,7 +5,7 @@ import {
     humanYearsCatYearsDogYears,
     mergeArrays,
     multiply, roundToNext5,
-    squareOrSquareRoot, stray
+    squareOrSquareRoot, stray, twoOldestAges
 } from "./1";
 
 test('merge array correct', ()=> {

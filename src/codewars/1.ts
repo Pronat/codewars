@@ -126,10 +126,17 @@ export const roundToNext5 = (n: number) => {
     return n;
 }
 
-const twoOldestAges = (ages: Array<number>) => {
+export const twoOldestAges = (ages: Array<number>) => {
     let max1 = 0
     let max2 = 0
+    let arr = []
     for (let i = 0; i < ages.length; i++) {
-        if
+        if (ages[i] > max1) {
+            max1 = ages[i]
+        }
+        else if (ages[i] > max2) {
+            max2 = ages[i]
+        }
     }
+    return arr.push(max1, max2)
 }
