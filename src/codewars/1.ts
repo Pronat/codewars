@@ -125,3 +125,11 @@ export const roundToNext5 = (n: number) => {
     while(n % 5 !== 0) n++;
     return n;
 }
+
+const twoOldestAges = (ages: Array<number>) => {
+    let max1 = 0
+    let max2 = 0
+    for (let i = 0; i < ages.length; i++) {
+        if
+    }
+}
