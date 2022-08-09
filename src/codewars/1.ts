@@ -122,7 +122,7 @@ export const getDivisorsCnt = (n: number) => {
 }
 
 export const roundToNext5 = (n: number) => {
-    while(n % 5 !== 0) n++;
+    while (n % 5 !== 0) n++;
     return n;
 }
 
@@ -133,10 +133,11 @@ export const twoOldestAges = (ages: Array<number>) => {
     for (let i = 0; i < ages.length; i++) {
         if (ages[i] > max1) {
             max1 = ages[i]
-        }
-        else if (ages[i] > max2) {
+        } else if (ages[i] > max2) {
             max2 = ages[i]
         }
     }
-    return arr.push(max1, max2)
+    arr.push(max2, max1)
+
+    return arr
 }

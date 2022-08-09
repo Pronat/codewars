@@ -98,8 +98,8 @@ test('Round up to the next multiple of 5', ()=> {
 })
 
 test('Two Oldest Ages', () => {
-    expect(twoOldestAges([1,5,87,45,8,8])).toBe([45, 87])
-    expect(twoOldestAges([1,5,87,45,8,8])).toBe([45, 87])
-    expect(twoOldestAges([6,5,83,5,3,18])).toBe([18, 83])
-    expect(twoOldestAges([6,5,83,5,3,18])).toBe([18, 83])
+    expect(twoOldestAges([1,5,87,45,8,8])).toEqual([45,87])
+    expect(twoOldestAges([1,5,87,45,8,8])).toEqual ([45, 87])
+    expect(twoOldestAges([6,5,83,5,3,18])).toEqual([18, 83])
+    expect(twoOldestAges([6,5,83,5,3,18])).toEqual([18, 83])
 })
