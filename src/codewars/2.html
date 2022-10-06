@@ -15,8 +15,10 @@
         if (len1 != len2) {
             return false
         }
+        test = test.toLowerCase()
+        original = original.toLowerCase()
 
-       test = test.split("").sort().join("")
+        test = test.split("").sort().join("")
         original = original.split("").sort().join("")
         return  test == original ? true : false
     };
