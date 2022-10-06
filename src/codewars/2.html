@@ -9,22 +9,12 @@
 </head>
 <body>
 <script>
-    let isAnagram = function(test, original) {
-        let len1 = test.length
-        let len2  = original.length
-        if (len1 != len2) {
-            return false
-        }
-        test = test.toLowerCase()
-        original = original.toLowerCase()
+    function reverseLetter(str) {
+         str = str.replace(/[^a-zа-яё]/gi, '')
+        return str.split("").reverse().join("")
+    }
 
-        test = test.split("").sort().join("")
-        original = original.split("").sort().join("")
-        return  test == original ? true : false
-    };
-
-    console.log(isAnagram("foefet", "toffee"))
-
+    console.log(reverseLetter("ultr53o?n"))
 
 </script>
 
