@@ -9,36 +9,12 @@
 </head>
 <body>
 <script>
-    function validatePIN(pin) {
-        if (pin == '0000' || pin == '000000') {
-            return true;
-        }
-        if (Math.sign(pin) !== 1 ) {
-            return false;
-        }
-
-        if (pin.match(/[\']/gi) == true )   {
-            return false;
-        }
-//      if (Number.isInteger(Number(pin)) == false) {
-//       return false;
-//     }
-
-
-        if ( pin.length == 4 || pin.length == 6 ) {
-            if (pin % 1 === 0 ) {
-                return true;
-
-            }  else {
-                return false;
-            }
-
-        } else {
-            return false;
-        }
+    function reverseLetter(str) {
+         str = str.replace(/[^a-zа-яё]/gi, '')
+        return str.split("").reverse().join("")
     }
 
-    validatePIN("123456");
+    console.log(reverseLetter("ultr53o?n"))
 
 </script>
 
