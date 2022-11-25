@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(nums){
+        if (nums === []) {
+            return []
+        }
+        if (nums === null) {
+            return []
+        }
+return nums.sort((a, b) => a - b)
+    }
+
+  console.log(solution([1, 2, 10, 50, 5]))
+</script>
+</body>
+</html>
