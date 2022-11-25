@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function arrayDiff(a, b) {
+        if (!a[0]) {
+            return []
+        }
+        if (!b[0]) {
+            return a
+        }
+        return a.filter(i=>!b.includes(i))
+            .concat(b.filter(i=>!a.includes(i)))
+    }
+
+    console.log(arrayDiff([], [1, 2]))
+</script>
+</body>
+</html>
